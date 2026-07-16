@@ -16,8 +16,8 @@ Write-Host "`n== 2. Install uv + serena (code-intelligence MCP) ==" -ForegroundC
 if (-not (Get-Command uv -ErrorAction SilentlyContinue)) {
   Write-Host "installing uv..."
   powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
-  $env:PATH = "$env:USERPROFILE\.local\bin;$env:PATH"
 }
+$env:PATH = "$env:USERPROFILE\.local\bin;$env:PATH"
 try {
   uv tool install "git+https://github.com/oraios/serena"
   Write-Host "serena installed"
