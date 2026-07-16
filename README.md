@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="myclaude_setup - clone-and-go Claude Code setup" width="100%">
+</p>
+
 # myclaude_setup
 
 One-command replication of a full **Claude Code** environment — plugins, MCP servers,
