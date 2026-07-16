@@ -1,2 +1,17 @@
+# Python
 __pycache__/
 *.pyc
+*.pyo
+
+# Local Claude settings backups written by apply_config.py
+settings.json.bak.*
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.bak
+*.log
+.idea/
+.vscode/
