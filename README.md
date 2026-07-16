@@ -4,6 +4,17 @@
 
 # myclaude_setup
 
+<p align="center">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/sachinbhatela/myclaude_setup?style=flat-square&color=7c6cff"></a>
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/sachinbhatela/myclaude_setup?style=flat-square&color=4f8cff">
+  <img alt="Repo size" src="https://img.shields.io/github/repo-size/sachinbhatela/myclaude_setup?style=flat-square&color=22d3ee">
+  <img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-setup-7c6cff?style=flat-square&logo=anthropic&logoColor=white">
+  <img alt="Plugins" src="https://img.shields.io/badge/plugins-29-4f8cff?style=flat-square">
+  <img alt="MCP" src="https://img.shields.io/badge/MCP-serena%20%2B%20connectors-22d3ee?style=flat-square">
+  <img alt="Agents" src="https://img.shields.io/badge/agents-4%20bundled-3fb950?style=flat-square">
+  <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-3fb950?style=flat-square">
+</p>
+
 One-command replication of a full **Claude Code** environment — plugins, MCP servers,
 agents, skills, hooks, and baseline settings — on any new machine or new Claude
 subscription. **Config only. No project/application code.**
