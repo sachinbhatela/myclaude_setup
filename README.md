@@ -28,6 +28,10 @@ bash bootstrap.sh
 # then: relaunch Claude Code — the 29 plugins install automatically
 ```
 
+<p align="center">
+  <img src="assets/quickstart.gif" alt="quickstart: git clone -> bootstrap -> relaunch Claude Code -> ready" width="90%">
+</p>
+
 ---
 
 ## What you get (capabilities)
