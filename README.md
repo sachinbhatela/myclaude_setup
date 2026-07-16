@@ -165,6 +165,7 @@ Green when: caveman/ponytail auto-activate · `/plugin` lists 29 · serena + Mic
 | `apply_config.py` | idempotent, non-destructive merge into `~/.claude/settings.json` (`--dry-run` supported) |
 | `claude-settings.snippet.json` | source of truth: 6 marketplaces + 29 enabled plugins + baseline |
 | `ONBOARDING.md` | full reference: every tool, MCP, auth flow, and the Azure MFA/WAM gotcha |
+| `SCOPE-AND-USAGE.md` | what's global vs project vs account, and what's used **automatically** vs manually |
 | `README.md` | this overview |
 
 ---
@@ -179,6 +180,9 @@ Green when: caveman/ponytail auto-activate · `/plugin` lists 29 · serena + Mic
 - **Non-destructive:** `apply_config.py` only adds missing keys and backs up
   `settings.json` before writing. Existing settings/plugins are untouched.
 - **serena** re-indexes whatever project you open — automatic, no per-repo config.
+- **What's global and what auto-fires** — see **`SCOPE-AND-USAGE.md`**: tooling (plugins/MCP/
+  skills/agents/hooks) is global and Claude auto-invokes it when your task needs it; hooks
+  (caveman/ponytail) are always-on; only `CLAUDE.md`/state is per-project; connectors per-account.
 
 ## Troubleshooting
 
