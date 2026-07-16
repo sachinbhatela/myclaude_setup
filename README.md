@@ -81,6 +81,20 @@ bash bootstrap.sh
 - **Plugin MCPs** — azure, context7, figma, huggingface, obsidian, postman, vercel ship inside their plugins (no separate install).
 - **claude.ai connectors** (account-scoped, manual) — **Microsoft Learn** (grounded MS/Azure docs) + optional Atlassian, Notion, Figma, Microsoft 365, Vercel.
 
+### Ready-made agents + task automation
+Starter **subagents** (installed to `~/.claude/agents/` by the bootstrap) plus loop/scheduling
+recipes — see **`AGENTS-AND-LOOPS.md`**:
+| Agent | Audience | Does |
+|---|---|---|
+| **dev-code-reviewer** | dev | review a diff/PR for bugs, security, missing tests (read-only) |
+| **dev-test-author** | dev | write + run focused tests matching your framework |
+| **content-writer** | creator | draft/edit posts, docs, copy in a given voice (cites facts) |
+| **content-researcher** | creator | topic → cited brief (facts, timeline, contrarian views) |
+
+Plus **loops** (`/loop` — recurring/self-paced tasks), **scheduled agents** (`/schedule` — cron),
+and an **add-on install guide** for pulling in more agents/skills/plugins/MCP when something
+isn't bundled. All in `AGENTS-AND-LOOPS.md`.
+
 ### Baseline settings applied
 `model: opus[1m]`, `effortLevel: xhigh`, `permissions.defaultMode: auto`, `autoUpdatesChannel: latest`
 (only set if not already present — your existing choices are preserved).
@@ -122,6 +136,7 @@ You're a brand-new Claude user on a fresh machine. Do these in order:
    The bootstrap:
    - merges `claude-settings.snippet.json` into `~/.claude/settings.json` (backs up first, idempotent),
    - installs `uv` + **serena** and registers it as a user MCP,
+   - copies the bundled **agents** (`agents/*.md`) into `~/.claude/agents/`,
    - prints the remaining manual steps.
 4. **Relaunch Claude Code** — it installs all 29 plugins on next launch. `caveman` and
    `ponytail` announce themselves at session start (that's your confirmation it worked).
@@ -166,6 +181,8 @@ Green when: caveman/ponytail auto-activate · `/plugin` lists 29 · serena + Mic
 | `claude-settings.snippet.json` | source of truth: 6 marketplaces + 29 enabled plugins + baseline |
 | `ONBOARDING.md` | full reference: every tool, MCP, auth flow, and the Azure MFA/WAM gotcha |
 | `SCOPE-AND-USAGE.md` | what's global vs project vs account, and what's used **automatically** vs manually |
+| `AGENTS-AND-LOOPS.md` | bundled agents, how to build/install your own, loops (`/loop`), scheduling (`/schedule`), add-on install guide |
+| `agents/*.md` | 4 ready-made subagents (2 dev, 2 content) — copied to `~/.claude/agents/` by the bootstrap |
 | `README.md` | this overview |
 
 ---

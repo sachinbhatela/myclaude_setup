@@ -29,6 +29,15 @@ else
 fi
 
 echo
+echo "== 4. Install bundled agents to ~/.claude/agents =="
+if [ -d "$HERE/agents" ]; then
+  mkdir -p "$HOME/.claude/agents"
+  cp "$HERE"/agents/*.md "$HOME/.claude/agents/" && echo "copied bundled agents"
+else
+  echo "no agents/ folder — skipping"
+fi
+
+echo
 echo "== DONE. Manual steps left (see ONBOARDING.md) =="
 echo " - Relaunch Claude Code (installs the enabled plugins)."
 echo " - claude.ai -> Settings -> Connectors: enable Microsoft Learn (+ others)."
